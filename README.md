@@ -13,10 +13,10 @@ Ovo je jednostavan RESTful API za upravljanje knjigama. API podržava operacije 
 
 1. **Klonirajte repozitorij u `htdocs` folder vašeg servera:**
 
-   git clone https://github.com/ismailrascicgithub/book-api.git
-   cd book-api
-   composer install
-   cp .env.example .env
+  - git clone https://github.com/ismailrascicgithub/book-api.git
+  - cd book-api
+  - composer install
+  - cp .env.example .env
 
 ## Pokretanje SQL skripte
 
