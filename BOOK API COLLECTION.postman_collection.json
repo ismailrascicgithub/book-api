@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "8bf34329-fc44-4a2f-bb58-6568dfb5cf37",
+		"name": "BOOK API COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37924571"
+	},
+	"item": [
+		{
+			"name": "GET ALL BOOKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/book-api/api/books?page=2&limit=2\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book-api",
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "2\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOK BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/book-api/api/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book-api",
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH BOOK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/book-api/api/books?search=programming&page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book-api",
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "programming"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET JWT TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/book-api/api/auth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book-api",
+						"api",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW BOOK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImlhdCI6MTcyNDg5Mjk4OSwiZXhwIjoxNzI0ODk2NTg5fQ._B30r5Qn1AxIbjmk9IBlx4YJlddI2ZfNCf2kTfvfn10",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"The Clean Coder\",\r\n  \"author\": \"Robert C. Martin\",\r\n  \"published_year\": \"2011\",\r\n  \"genre\": \"Software Engineering\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/book-api/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book-api",
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE BOOK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImlhdCI6MTcyNDg5Mjk4OSwiZXhwIjoxNzI0ODk2NTg5fQ._B30r5Qn1AxIbjmk9IBlx4YJlddI2ZfNCf2kTfvfn10",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"The Pragmatic Programmer - Updated\",\r\n  \"author\": \"Andrew Hunt, David Thomas\",\r\n  \"published_year\": \"2004\",\r\n  \"genre\": \"Web Development\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/book-api/api/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book-api",
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BOOK",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/book-api/api/books/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"book-api",
+						"api",
+						"books",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
