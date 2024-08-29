@@ -33,5 +33,3 @@ scripts/test_api.sh
 *.swp
 *~
 
-# Ignoriši Composer lock file ako ne želite da zaključate verzije zavisnosti
-composer.lock
