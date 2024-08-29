@@ -1,0 +1,37 @@
+# Ignoriši sve što je u vendor direktoriju (PHP dependency manager - Composer)
+vendor/
+
+# Ignoriši sve .env datoteke (koriste se za pohranu osjetljivih podataka poput API ključeva)
+.env
+
+# Ignoriši konfiguracijske datoteke specifične za okruženje
+config.php
+*.local.php
+*.env.php
+
+# Ignoriši sve varijable sesije, keša i privremenih datoteka
+sessions/
+cache/
+tmp/
+*.log
+
+# Ignoriši datoteke specifične za IDE/editore
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignoriši datoteke specifične za operativni sustav
+.DS_Store
+Thumbs.db
+
+# Ignoriši datoteke za testiranje (ako ne želite da budu uključene u repo)
+scripts/test_api.sh
+
+# Ignoriši sve sigurnosne kopije i privremene datoteke
+*.bak
+*.swp
+*~
+
+# Ignoriši Composer lock file ako ne želite da zaključate verzije zavisnosti
+composer.lock
